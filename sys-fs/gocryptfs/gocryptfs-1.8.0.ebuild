@@ -23,7 +23,7 @@ SRC_URI="https://${EGO_PN}/releases/download/v${PV}/${PN}_v${PV}_src-deps.tar.gz
 LICENSE="Apache-2.0 BSD BSD-2 MIT"
 
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64 ~arm"
 
 IUSE="debug libressl +man pie +ssl"
 
