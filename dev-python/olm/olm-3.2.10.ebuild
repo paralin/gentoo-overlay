@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=(python3_7 python3_8)
+PYTHON_COMPAT=(python3_7 python3_8 python3_9)
 
 inherit distutils-r1
 
@@ -13,6 +13,7 @@ SRC_URI="https://gitlab.matrix.org/matrix-org/olm/-/archive/${PV}/olm-${PV}.tar.
 KEYWORDS="~amd64"
 SLOT="0"
 LICENSE="Apache-2.0"
+RESTRICT="mirror"
 
 S="${S}/python"
 
