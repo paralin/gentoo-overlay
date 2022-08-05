@@ -23,7 +23,7 @@ SLOT="1"
 KEYWORDS="amd64 ~x86"
 IUSE="examples"
 
-RESTRICT="strip test mirror"
+RESTRICT="strip test"
 
 QA_PREBUILT="*"
 
