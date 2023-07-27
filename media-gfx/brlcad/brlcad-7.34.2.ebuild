@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake desktop java-pkg-2 flag-o-matic
+inherit cmake desktop git-r3 java-pkg-2 flag-o-matic
 
 DESCRIPTION="Constructive solid geometry modeling system"
 HOMEPAGE="https://brlcad.org/ https://github.com/BRL-CAD/brlcad"
@@ -49,8 +49,6 @@ DEPEND="${RDEPEND}
 # Install into /usr/ not recommended by upstream due to possible file conflicts
 # with bundled libraries!
 BRLCAD_DIR="${EPREFIX}/usr/${PN}"
-
-PATCHES=( "${FILESDIR}/${P}-skip-gstep.patch" )
 
 src_prepare() {
 	cmake_src_prepare
