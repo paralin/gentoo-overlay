@@ -1,0 +1,25 @@
+From a95c1a23b094bad340584fdde74cec66db93bbc8 Mon Sep 17 00:00:00 2001
+From: Christian Stewart <christian@aperture.us>
+Date: Wed, 2 Aug 2023 14:21:18 -0700
+Subject: [PATCH] llvm-link
+
+Signed-off-by: Christian Stewart <christian@aperture.us>
+---
+ utils/prepare-builtins/CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/utils/prepare-builtins/CMakeLists.txt b/utils/prepare-builtins/CMakeLists.txt
+index 6366196..f233c62 100644
+--- a/utils/prepare-builtins/CMakeLists.txt
++++ b/utils/prepare-builtins/CMakeLists.txt
+@@ -26,5 +26,5 @@ set_target_properties(prepare-builtins PROPERTIES
+   CXX_STANDARD_REQUIRED Yes
+   CXX_EXTENSIONS No)
+ llvm_update_compile_flags(prepare-builtins)
+-llvm_map_components_to_libnames(llvm_libs support core bitreader bitwriter)
+-target_link_libraries(prepare-builtins ${llvm_libs})
++llvm_map_components_to_libnames(llvm_libs support)
++target_link_libraries(prepare-builtins ${llvm_libs} LLVM)
+-- 
+2.41.0
+

@@ -30,7 +30,11 @@ DEPEND="${RDEPEND}"
 
 CMAKE_BUILD_TYPE=Release
 
-PATCHES=("${FILESDIR}/${PN}-5.6.0-llvm-link.patch")
+PATCHES=(
+  "${FILESDIR}/0001-llvm-link.patch"
+  "${FILESDIR}/0002-test-bitcode-dir.patch"
+  "${FILESDIR}/0003-revert-update-counters-for-gfx11.patch"
+)
 
 src_prepare() {
 	sed -e "s:amdgcn/bitcode:lib/amdgcn/bitcode:" -i "${S}/cmake/OCL.cmake" || die
