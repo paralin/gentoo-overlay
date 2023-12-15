@@ -61,6 +61,6 @@ src_configure() {
 
 src_install() {
 	cmake_src_install
-	dodoc README.md ROADMAP.md CONTRIBUTING.md CHANGELOG
+	dodoc README.md CONTRIBUTING.md CHANGELOG
 	dodoc -r doc
 }
